@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_styles %}
+<link rel="stylesheet" href="{% static 'css/about_style.css' %}">
+{% endblock %}
+
+{% block content %}
+<section class="about-section">
+    <div class="about-container">
+        <div class="about-image">
+            <img src="{% static 'images/mother.jpg' %}" alt="کبری امانی">
+        </div>
+        <div class="about-text">
+            <h2>درباره من</h2>
+            <p>
+                من <strong>کبری امانی</strong> هستم سال‌هاست در زمینه <strong>طب سنتی</strong> فعالیت می‌کنم 
+                و با استفاده از روش‌های زبان‌شناسی و مزاج‌شناسی به شناسایی و درمان بیماری‌ها می‌پردازم.  
+                هدف من این است که با بهره‌گیری از داروهای طبیعی مانند <strong>چای‌های گیاهی</strong>، 
+                <strong>روغن‌ها</strong> و ترکیبات سنتی، سلامتی و آرامش را به زندگی شما هدیه کنم.  
+            </p>
+            <p>
+                در کنار درمان، علاقه‌مند به آموزش طب سنتی هستم و کلاس‌های متعددی در زمینه‌ی 
+                <strong>مزاج‌شناسی</strong> و <strong>زبان‌شناسی</strong> برای علاقه‌مندان و درمانگران برگزار می‌کنم.  
+            </p>
+        </div>
+    </div>
+</section>
+{% endblock %}

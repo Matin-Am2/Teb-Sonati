@@ -1,0 +1,23 @@
+{% load static %}
+
+{% block extra %}
+    <link rel="stylesheet" href="{% static 'css/navbar_style.css' %}">
+{% endblock %}
+
+<nav>
+    <!-- Checkbox for toggling menu -->
+    <input type="checkbox" id="check">
+    <!-- Menu icon -->
+    <label for="check" class="checkbtn">
+      <i class="fas fa-bars"></i>
+    </label>
+    <!-- Site logo -->
+    <label class="logo">کبری امانی  </label>
+    <!-- Navigation links -->
+    <ul>
+      <li><a href="{% url 'home:about'%}">درباره من </a></li>
+      <li><a href="#">محصولات</a></li>
+      <li><a href="#">مقاله ها</a></li>
+      <li><a href="#">تماس با من</a></li>
+    </ul>
+  </nav>

@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_styles %}
+<link rel="stylesheet" href="{% static 'css/home_style.css' %}">
+{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-content">
+        <div class="hero-title">
+            <!-- آیکن برگ -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="#77e600">
+                <path d="M12 2C8 6 2 12 2 18a10 10 0 0 0 20 0c0-6-6-12-10-16z"/>
+            </svg>
+            <h1>به دنیای طب سنتی خوش آمدید</h1>
+        </div>
+        <p>
+            طب سنتی بر پایه طبیعت و هماهنگی بدن با آن است.  
+            با زبان‌شناسی و مزاج‌شناسی، بیماری‌ها شناخته و با داروهای گیاهی درمان می‌شوند.  
+        </p>
+        <a href="{% url 'home:about' %}" class="btn">بیشتر بدانید</a>
+    </div>    
+</section>
+
+<!-- Products Section -->
+<section class="products">
+    <h2>معرفی محصولات</h2>
+    <div class="slider-container">
+        <div class="cards-holder">
+            <!-- محصول نمونه -->
+            <div class="card">
+                <a href="">
+                    <img src="{% static 'images/product1.jpg' %}" alt="چای گیاهی">
+                    <h3>چای گیاهی آرامش‌بخش</h3>
+                </a>
+            </div>
+
+            <div class="card">
+                <a href="">
+                    <img src="{% static 'images/product2.jpg' %}" alt="روغن درمانی">
+                    <h3>روغن درمانی طبیعی</h3>
+                </a>
+            </div>
+
+            <div class="card">
+                <a href="">
+                    <img src="{% static 'images/product3.jpg' %}" alt="پک سلامتی">
+                    <h3>پک کامل سلامتی</h3>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Extra Section -->
+<section class="extra">
+    <h2>کلاس‌ها و آموزش‌ها</h2>
+    <p>
+        ما در کنار درمان، دوره‌ها و کلاس‌هایی در زمینه مزاج‌شناسی و زبان‌شناسی برگزار می‌کنیم  
+        تا علاقه‌مندان بیشتر با طب سنتی آشنا شوند.
+    </p>
+</section>
+{% endblock %}

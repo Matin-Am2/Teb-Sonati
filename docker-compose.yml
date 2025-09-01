@@ -1,0 +1,43 @@
+services:
+  backend:
+    build: . 
+    container_name: teb-sonati
+    command: sh -c "python manage.py makemigrations &&
+      python manage.py migrate &&
+      python manage.py runserver 0.0.0.0:8000"
+    ports:
+      - "8000:8000"
+    restart: always
+    volumes:
+      - ./:/app 
+    networks:
+      - main
+    env_file:
+      - .env
+    depends_on:
+      - postgres_db
+
+  postgres_db: 
+    image: postgres:15
+    container_name: postgresql-teb-sonati
+    restart : always
+    ports:
+      - "0005:5432"
+    environment:
+      POSTGRES_DB: ${DB_POSTGRES}
+      POSTGRES_USER: ${USER_POSTGRES}
+      POSTGRES_PASSWORD: ${PASSWORD_POSTGRES} 
+    env_file:
+      - .env
+    
+    volumes:
+      - postgres_data:/var/lib/postgesql/data
+    networks:
+      - main
+
+
+networks:
+  main: 
+
+volumes:
+  postgres_data:

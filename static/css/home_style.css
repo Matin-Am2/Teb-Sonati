@@ -1,0 +1,122 @@
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(20, 94, 3, 0.6), rgba(20, 94, 3, 0.6)),
+                url("../images/hero-bg.jpg") center/cover no-repeat;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    line-height: 1.8;
+}
+
+.hero .btn {
+    background: #77e600;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.hero .btn:hover {
+    background: #145e03;
+}
+.hero-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* فاصله بین آیکن و متن */
+}
+.hero-title h1 {
+    margin: 0;
+}
+
+
+/* Products Section */
+.products {
+    background: #f9fff9;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.products h2 {
+    font-size: 28px;
+    margin-bottom: 40px;
+    color: #145e03;
+}
+
+/* اسلایدر */
+.slider-container {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.cards-holder {
+    display: flex;
+    gap: 20px;
+    animation: scroll 25s linear infinite;
+}
+
+/* کارت محصول */
+.card {
+    width: 260px;
+    background: linear-gradient(145deg, #ffffff, #f1fff1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    text-align: center;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card h3 {
+    font-size: 18px;
+    color: #145e03;
+    padding: 15px;
+}
+
+/* Extra Section */
+.extra {
+    background: #fff;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.extra h2 {
+    font-size: 26px;
+    margin-bottom: 20px;
+    color: #145e03;
+}
+
+.extra p {
+    font-size: 18px;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+/* انیمیشن حرکت */
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
