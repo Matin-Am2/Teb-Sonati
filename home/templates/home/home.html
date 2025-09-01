@@ -8,12 +8,15 @@
 {% block content %}
 <!-- Hero Section -->
 <section class="hero">
+    <!-- Background Animated Suns -->
+    <div class="sun"></div>
+    <div class="sun2"></div>
+    <div class="sun3"></div>
+
     <div class="hero-content">
         <div class="hero-title">
             <!-- آیکن برگ -->
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="#77e600">
-                <path d="M12 2C8 6 2 12 2 18a10 10 0 0 0 20 0c0-6-6-12-10-16z"/>
-            </svg>
+            <img src="{% static 'images/icons/medicine.png' %}" alt="" width="100px" height="100px">
             <h1>به دنیای طب سنتی خوش آمدید</h1>
         </div>
         <p>
@@ -23,6 +26,7 @@
         <a href="{% url 'home:about' %}" class="btn">بیشتر بدانید</a>
     </div>    
 </section>
+
 
 <!-- Products Section -->
 <section class="products">

@@ -5,6 +5,15 @@
     color: white;
     text-align: center;
     padding: 100px 20px;
+    width: 100%;   /* ⬅️ کل عرض صفحه رو بگیر */
+    min-height: 100vh; /* ⬅️ ارتفاع رو هم اندازه صفحه کن */
+    box-sizing: border-box; /* ⬅️ جلوی اسکرول اضافه رو بگیر */
+}
+.hero-content {
+    position: relative;
+    margin-top: 150px; /* مقدار رو می‌تونی تغییر بدی */
+    text-align: center; /* اگه بخوای وسط چین بمونه */
+    z-index: 2; /* مطمئن میشه روی بک‌گراند نمایش داده بشه */
 }
 
 .hero h1 {
@@ -35,6 +44,7 @@
     align-items: center;
     justify-content: center;
     gap: 10px; /* فاصله بین آیکن و متن */
+    flex-wrap: wrap; /* تو گوشی آیکن و متن زیر هم میرن */
 }
 .hero-title h1 {
     margin: 0;
@@ -76,6 +86,7 @@
     overflow: hidden;
     transition: transform 0.4s ease, box-shadow 0.4s ease;
     text-align: center;
+    flex-shrink: 0; /* نذار کوچیک شه */
 }
 
 .card:hover {
@@ -119,4 +130,124 @@
 @keyframes scroll {
     0% { transform: translateX(0); }
     100% { transform: translateX(-50%); }
+}
+
+/* 📱 ریسپانسیو برای گوشی‌ها */
+@media (max-width: 768px) {
+    .hero {
+        padding: 60px 15px;
+    }
+
+    .hero h1 {
+        font-size: 24px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .hero img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .products h2 {
+        font-size: 22px;
+    }
+
+    .card {
+        width: 200px;
+    }
+
+    .extra h2 {
+        font-size: 22px;
+    }
+
+    .extra p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 40px 10px;
+    }
+
+    .hero h1 {
+        font-size: 20px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .hero .btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .card {
+        width: 160px;
+    }
+
+    .products h2, 
+    .extra h2 {
+        font-size: 20px;
+    }
+
+    .extra p {
+        font-size: 14px;
+    }
+}
+/* ===== Animated Suns ===== */
+.hero {
+    position: relative; /* تا عناصر مطلق داخلش محدود بشن */
+    overflow: hidden;   /* نذار خورشیدا بیرون بزنن */
+}
+
+.sun, .sun2, .sun3 {
+    opacity: 0.3;
+    position: absolute;
+    border-radius: 50%;
+    animation-name: sunrise2;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+/* خورشیدها */
+.sun {
+    background-color: rgb(36, 134, 7);
+    top: -1050px;
+    left: -300px;
+    width: 2200px;
+    height: 1200px;
+    animation-duration: 10s;
+    animation-delay: 1s;
+}
+.sun2 {
+    background-color: rgb(134, 194, 22);
+    top: -1050px;
+    left: -1200px;
+    width: 2200px;
+    height: 1200px;
+    animation-duration: 14s;
+    animation-delay: 2s;
+}
+.sun3 {
+    background-color: yellow;
+    top: -1050px;
+    left: -600px;
+    width: 2200px;
+    height: 1200px;
+    animation-duration: 12s;
+    animation-delay: 0s;
+}
+
+/* انیمیشن */
+@keyframes sunrise2 {
+    0%   { transform: translate(0px, 0px); }
+    25%  { transform: translate(150px, 50px); }
+    50%  { transform: translate(300px, 10px); }
+    75%  { transform: translate(150px, 50px); }
+    100% { transform: translate(0px, 0px); }
 }
