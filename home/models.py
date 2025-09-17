@@ -17,6 +17,8 @@ class Product(models.Model):
     slug = models.SlugField(unique=True,verbose_name="اسلاگ",allow_unicode=True,blank=True)
     description = models.TextField(verbose_name="توضیحات")
     image = models.ImageField(upload_to="products/",verbose_name="عکس")
+    extra_info = models.JSONField(null=True,blank=True,verbose_name="اطلاعات اضافی")
+
 
     def save(self,*args,**kwargs):
         if not self.slug:

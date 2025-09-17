@@ -34,26 +34,14 @@
     <div class="slider-container">
         <div class="cards-holder">
             <!-- محصول نمونه -->
-            <div class="card">
-                <a href="">
-                    <img src="{% static 'images/product1.jpg' %}" alt="چای گیاهی">
-                    <h3>چای گیاهی آرامش‌بخش</h3>
-                </a>
-            </div>
-
-            <div class="card">
-                <a href="">
-                    <img src="{% static 'images/product2.jpg' %}" alt="روغن درمانی">
-                    <h3>روغن درمانی طبیعی</h3>
-                </a>
-            </div>
-
-            <div class="card">
-                <a href="">
-                    <img src="{% static 'images/product3.jpg' %}" alt="پک سلامتی">
-                    <h3>پک کامل سلامتی</h3>
-                </a>
-            </div>
+             {% for product in products %}
+                <div class="card">
+                    <a href="">
+                        <img src="{{product.image.url}}" alt="چای گیاهی">
+                        <h3>{{ product.name }}</h3>
+                    </a>
+                </div>
+            {% endfor %}
         </div>
     </div>
 </section>
