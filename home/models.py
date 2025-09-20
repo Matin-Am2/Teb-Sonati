@@ -15,9 +15,11 @@ class Product(models.Model):
     category = models.ForeignKey("Category",on_delete=models.SET_NULL,related_name="products",null=True,blank=True,verbose_name="دسته بندی")
     name = models.CharField(max_length=255,verbose_name="نام محصول")
     slug = models.SlugField(unique=True,verbose_name="اسلاگ",allow_unicode=True,blank=True)
-    description = models.TextField(verbose_name="توضیحات")
     image = models.ImageField(upload_to="products/",verbose_name="عکس")
-    extra_info = models.JSONField(null=True,blank=True,verbose_name="اطلاعات اضافی")
+    history = models.TextField(null=True,blank=True,verbose_name="تاریخچه")
+    benefits = models.TextField(null=True,blank=True,verbose_name="فواید")
+    usage = models.TextField(null=True,blank=True,verbose_name="طریقه مصرف")
+    precautions = models.TextField(null=True,blank=True,verbose_name="موارد احتیاط")
 
 
     def save(self,*args,**kwargs):
