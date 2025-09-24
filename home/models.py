@@ -20,7 +20,8 @@ class Product(models.Model):
     benefits = models.TextField(null=True,blank=True,verbose_name="فواید")
     usage = models.TextField(null=True,blank=True,verbose_name="طریقه مصرف")
     precautions = models.TextField(null=True,blank=True,verbose_name="موارد احتیاط")
-
+    created_at = models.DateTimeField(auto_now=True,null=True)
+    updated_at = models.DateTimeField(auto_now_add=True,null=True)
 
     def save(self,*args,**kwargs):
         if not self.slug:

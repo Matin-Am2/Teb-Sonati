@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_styles %}
+<link rel="stylesheet" href="{% static 'css/products_style.css' %}">
+{% endblock %}
+
+{% block content %}
+<section class="products-page">
+    <h1 class="page-title">محصولات ما</h1>
+    <p class="page-subtitle">انواع محصولات گیاهی و سنتی برای سلامتی و آرامش شما</p>
+
+    <div class="products-grid">
+        {% for product in products %}
+            <div class="product-card">
+                <a href="{{ product.get_absolute_url }}">
+                    <img src="{{ product.image.url }}" alt="{{ product.name }}">
+                    <div class="card-body">
+                        <h3>{{ product.name }}</h3>
+                        <p class="short-desc">{{ product.short_description|truncatewords:15 }}</p>
+                    </div>
+                </a>
+            </div>
+        {% empty %}
+            <p>هنوز محصولی اضافه نشده است.</p>
+        {% endfor %}
+    </div>
+    <!-- Pagination -->
+    {% if is_paginated %}
+    <div class="pagination">
+        {% if page_obj.has_previous %}
+            <a href="?page=1" class="first-page">اول</a>
+            <a href="?page={{ page_obj.previous_page_number }}" class="prev">قبلی</a>
+        {% endif %}
+
+        {% for num in page_obj.paginator.page_range %}
+            {% if page_obj.number == num %}
+                <span class="current">{{ num }}</span>
+            {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
+                <a href="?page={{ num }}">{{ num }}</a>
+            {% endif %}
+        {% endfor %}
+
+        {% if page_obj.has_next %}
+            <a href="?page={{ page_obj.next_page_number }}" class="next">بعدی</a>
+            <a href="?page={{ page_obj.paginator.num_pages }}" class="last-page">آخر</a>
+        {% endif %}
+    </div>
+    {% endif %}
+
+</section>
+{% endblock %}
+
+

@@ -251,3 +251,146 @@
     75%  { transform: translate(150px, 50px); }
     100% { transform: translate(0px, 0px); }
 }
+
+/* ===== Footer ===== */
+.footer {
+    background: #145e03; /* رنگ سبز اصلی */
+    color: #fff;
+    text-align: center;
+    padding: 50px 20px;
+    margin-top: 60px;
+}
+
+.footer-content {
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 8px;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #77e600;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.3);
+    padding-top: 15px;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+/* Products Section */
+.products {
+    background: #f9fff9;
+    padding: 60px 20px;
+}
+
+/* هدر بخش محصولات */
+.products-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.products-header h2 {
+    font-size: 28px;
+    color: #145e03;
+}
+
+/* دکمه اصلی */
+.btn {
+    background: #77e600;
+    color: white;
+    padding: 12px 28px;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.btn:hover {
+    background: #145e03;
+    transform: scale(1.05);
+}
+
+/* دکمه مخصوص بخش محصولات */
+.view-all-btn {
+    padding: 10px 22px;   /* کمی کوچیک‌تر از بقیه */
+    font-size: 0.9rem;
+}
+
+/* اسلایدر */
+.slider-container {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.cards-holder {
+    display: flex;
+    gap: 20px;
+    animation: scroll 25s linear infinite;
+}
+
+/* کارت محصول */
+.card {
+    width: 260px;
+    background: linear-gradient(145deg, #ffffff, #f1fff1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card h3 {
+    font-size: 18px;
+    color: #145e03;
+    padding: 15px;
+}
+
+/* انیمیشن حرکت اسلایدر */
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* 📱 ریسپانسیو */
+@media (max-width: 768px) {
+    .products-header h2 {
+        font-size: 22px;
+    }
+    .card {
+        width: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .products-header {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .card {
+        width: 160px;
+    }
+}
