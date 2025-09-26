@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_styles %}
+    <link rel="stylesheet" href="{% static 'css/product_detail_style.css' %}">
+{% endblock %}
+
+
+
+
+{% block content %}
+<div class="container">
+    <div class="product-card">
+        <!-- تصویر -->
+        <img src="{{ product.image.url }}" alt="{{ product.name }}" class="product-image">
+
+        <!-- محتوا -->
+        <div class="product-content">
+            <div class="section-box">
+                <h4>دسته‌بندی</h4>
+                <p>{{ product.category }}</p>
+            </div>
+
+            <div class="section-box">
+                <h4>تاریخچه</h4>
+                <p>{{ product.history|linebreaks }}</p>
+            </div>
+
+            <div class="section-box">
+                <h4 class="green-title">فواید</h4>
+                <p>{{ product.benefits|linebreaks }}</p>
+            </div>
+
+            <div class="section-box">
+                <h4>طریقه مصرف</h4>
+                <p>{{ product.usage|linebreaks }}</p>
+            </div>
+
+            <div class="precautions-box">
+                <h4>موارد قابل احتیاط</h4>
+                <p>{{ product.precautions|linebreaks }}</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

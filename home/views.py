@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views.generic.base import TemplateView
-from django.views.generic import ListView
+from django.views.generic import ListView,DetailView
 from django.views import View
 from .models import Product
 # Create your views here.
@@ -27,3 +27,9 @@ class ProductsView(ListView):
 
     def get_queryset(self):
         return Product.objects.all()
+
+
+class ProductDetailView(DetailView):
+    model = Product
+    template_name = "home/product_detail.html"
+    context_object_name = "product"
