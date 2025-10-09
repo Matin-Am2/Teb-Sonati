@@ -10,24 +10,9 @@
     <h1 class="page-title">محصولات ما</h1>
     <p class="page-subtitle">انواع محصولات گیاهی و سنتی برای سلامتی و آرامش شما</p>
 
-    <div class="products-grid">
-        {% for product in products %}
-            <div class="product-card">
-                <a href="{% url 'home:product_detail' product.id %}">
-                    <img src="{{ product.image.url }}" alt="{{ product.name }}">
-                    <div class="card-body">
-                        <h3>{{ product.name }}</h3>
-                        <p class="short-desc">{{ product.short_description|truncatewords:15 }}</p>
-                    </div>
-                </a>
-            </div>
-        {% empty %}
-            <p>هنوز محصولی اضافه نشده است.</p>
-        {% endfor %}
-    </div>
-    <!-- Pagination -->
+    <!-- Pagination بالای محصولات -->
     {% if is_paginated %}
-    <div class="pagination">
+    <div class="pagination top-pagination">
         {% if page_obj.has_previous %}
             <a href="?page=1" class="first-page">اول</a>
             <a href="?page={{ page_obj.previous_page_number }}" class="prev">قبلی</a>
@@ -48,7 +33,21 @@
     </div>
     {% endif %}
 
+    <div class="products-grid">
+        {% for product in products %}
+            <div class="product-card">
+                <a href="{% url 'home:product_detail' product.id %}">
+                    <img src="{{ product.image.url }}" alt="{{ product.name }}">
+                    <div class="card-body">
+                        <h3>{{ product.name }}</h3>
+                        <p class="short-desc">{{ product.short_description|truncatewords:15 }}</p>
+                    </div>
+                </a>
+            </div>
+        {% empty %}
+            <p>هنوز محصولی اضافه نشده است.</p>
+        {% endfor %}
+    </div>
 </section>
 {% endblock %}
-
 

@@ -7,7 +7,7 @@ services:
       python manage.py runserver 0.0.0.0:8000"
     ports:
       - "8000:8000"
-    restart: always
+    # restart: always
     volumes:
       - ./:/app 
     networks:
@@ -19,10 +19,7 @@ services:
 
   postgres_db: 
     image: postgres:15
-    container_name: postgresql-teb-sonati
-    restart : always
-    ports:
-      - "0005:5432"
+    # restart : always
     environment:
       POSTGRES_DB: ${DB_POSTGRES}
       POSTGRES_USER: ${USER_POSTGRES}
@@ -36,8 +33,21 @@ services:
       - main
 
 
+  redis:
+    image: redis:latest
+    command: redis-server --appendonly yes
+    # restart: always
+    
+    ports:
+      - "6000:6379"
+    volumes: 
+      - redis_data:/data
+    networks:
+      - main
+    
 networks:
   main: 
 
 volumes:
   postgres_data:
+  redis_data:
