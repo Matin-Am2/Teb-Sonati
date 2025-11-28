@@ -4,11 +4,17 @@
                 url("../images/hero-bg.jpg") center/cover no-repeat;
     color: white;
     text-align: center;
-    padding: 100px 20px;
-    width: 100%;   /* ⬅️ کل عرض صفحه رو بگیر */
-    min-height: 100vh; /* ⬅️ ارتفاع رو هم اندازه صفحه کن */
-    box-sizing: border-box; /* ⬅️ جلوی اسکرول اضافه رو بگیر */
+    padding: 70px 20px;
+    width: 100%;
+    min-height: unset;
+    max-height: 500px;
+    box-sizing: border-box;
+
+    /* اینا هم اضافه کن */
+    position: relative;
+    overflow: hidden;
 }
+
 .hero-content {
     position: relative;
     margin-top: 150px; /* مقدار رو می‌تونی تغییر بدی */
@@ -108,9 +114,12 @@
 
 /* Extra Section */
 .extra {
-    background: #fff;
+    background: #f2fff2;
     padding: 80px 20px;
     text-align: center;
+    box-sizing: border-box;
+    max-height: 500px;
+    margin: 0px;
 }
 
 .extra h2 {
@@ -259,6 +268,7 @@
     text-align: center;
     padding: 50px 20px;
     margin-top: 60px;
+    box-sizing: border-box;
 }
 
 .footer-content {
@@ -287,8 +297,11 @@
 
 /* Products Section */
 .products {
-    background: #f9fff9;
+    background: #f2fff2;
     padding: 60px 20px;
+    box-sizing: border-box;
+    max-height: 500px;
+    
 }
 
 /* هدر بخش محصولات */
@@ -393,4 +406,72 @@
     .card {
         width: 160px;
     }
+}
+
+/* ===== Why Herbal Section ===== */
+.why-herbal {
+    background: #f2fff2;
+    box-sizing: border-box;
+    padding: 80px 20px;
+    min-height: unset;
+    max-height: 600px;
+    
+}
+
+.why-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.why-image img {
+    width: 500px;
+    height: auto;
+    border-radius: 18px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+.why-text {
+    max-width: 550px;
+}
+
+.why-text h2 {
+    font-size: 30px;
+    color: #145e03;
+    margin-bottom: 20px;
+}
+
+.why-text p {
+    font-size: 18px;
+    line-height: 1.9;
+    color: #444;
+    margin-bottom: 15px;
+}
+
+
+/* Responsive */
+@media (max-width: 900px) {
+    .why-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .why-image img {
+        width: 90%;
+        max-width: 400px;
+    }
+}
+.about { 
+    background-color: #f2fff2;
+    box-sizing: border-box;
+    padding: 100px;
+    max-height:400px;
+    min-height: unset;
+    max-width: auto;
+}
+html {
+    scroll-behavior: smooth;
 }
