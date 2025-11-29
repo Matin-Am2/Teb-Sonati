@@ -10,6 +10,13 @@
     <h1 class="page-title">محصولات ما</h1>
     <p class="page-subtitle">انواع محصولات گیاهی و سنتی برای سلامتی و آرامش شما</p>
 
+
+<!-- HTML !-->
+{% for category in categories %}
+    <a href="{% url 'home:products2' category.slug %}"><button class="button-33" role="button">{{ category.name }}</button></a>
+{% endfor %}
+<br></br>
+
     <!-- Pagination بالای محصولات -->
     {% if is_paginated %}
     <div class="pagination top-pagination">

@@ -47,13 +47,3 @@ class Category(models.Model):
         verbose_name = 'category'
         verbose_name_plural = "categories"
 
-class Article(models.Model):
-    title = models.CharField(max_length=200,verbose_name="عنوان")
-    slug = models.SlugField(unique=True,verbose_name="اسلاگ")
-    content = models.TextField(verbose_name="محتوا")
-    image = models.ImageField(upload_to="articles/", blank=True, null=True,verbose_name="عکس")
-    category = models.ForeignKey(Category, on_delete=models.SET_NULL, null=True, blank=True,verbose_name="دسته بندی")
-    created_at = models.DateTimeField(auto_now_add=True,verbose_name="زمان ایجاد شده")
-
-    def __str__(self):
-        return self.name
