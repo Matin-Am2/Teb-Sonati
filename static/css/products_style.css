@@ -154,6 +154,7 @@
   display: inline-block;
   font-family: 'Sahel', sans-serif;
   padding: 12px 32px;
+  margin: 2px;
   text-align: center;
   text-decoration: none;
   transition: all 250ms;

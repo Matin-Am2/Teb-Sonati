@@ -1,6 +1,5 @@
 from django.views.generic.base import TemplateView
 from django.views.generic import ListView,DetailView
-from django.utils.http import urlencode
 from django.views.decorators.cache import cache_page
 from django.utils.decorators import method_decorator
 from .models import Product,Category

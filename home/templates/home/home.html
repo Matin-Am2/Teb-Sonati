@@ -106,7 +106,7 @@
 
 
 <!-- Extra Section -->
-<section class="extra">
+<section class="extra" id="extra">
     <h2>کلاس‌ها و آموزش‌ها</h2>
     <p>
         ما در کنار درمان‌های طبیعی، دوره‌ها و کارگاه‌هایی در زمینه <strong>مزاج‌شناسی</strong>،  
@@ -127,13 +127,13 @@
 <!-- Footer -->
 <footer class="footer">
     <div class="footer-content">
-        <p>تماس با ما: info@tebsun.com | تلفن: ۰۲۱-۱۲۳۴۵۶۷۸</p>
-        <p>آدرس: تهران، خیابان نمونه، پلاک ۱۲۳</p>
+        <p>تماس با ما: info@tebsun.com | تلفن: ۰۹۱۳۸۸۸۷۵۳۸</p>
+        <p> آدرس: تهران ، کرج</p>
         <nav class="footer-links">
-            <a href="#">خانه</a> | 
-            <a href="#">محصولات</a> | 
-            <a href="#">کلاس‌ها</a> | 
-            <a href="#">تماس با ما</a>
+            <a href="{% url 'home:home' %}">خانه</a> | 
+            <a href="{% url 'home:products' %}">محصولات</a> | 
+            <a href="#extra">کلاس‌ها</a> | 
+            <a href="{% url 'home:about' %}">تماس با ما</a>
         </nav>
     </div>
     <div class="footer-bottom">
