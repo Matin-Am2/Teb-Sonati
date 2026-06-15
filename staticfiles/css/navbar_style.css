@@ -15,13 +15,13 @@ nav {
   height: 80px;
   width: 100%;
 }
-label.logo {
-  color: white;
-  font-size: 25px;
-  line-height: 70px;
-  padding: 0 100px;
-  font-weight: bold;
+label.logo img {
+  height: 80px; /* ارتفاع لوگو */
+  width: 80px; /* عرض خودکار برای حفظ تناسب */
+  vertical-align: middle; /* وسط‌چینی عمودی */
+  display: inline-block; /* تصویر را به صورت بلاک نمایش می‌دهد */
 }
+
 nav ul {
   float: right;
   margin-right: 20px;
