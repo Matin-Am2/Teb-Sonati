@@ -10,12 +10,13 @@ services:
     # restart: always
     volumes:
       - ./:/app 
-    networks:
-      - main
+
+
     env_file:
       - .env
     depends_on:
-      - postgres_db
+      postgres_db:
+        condition: service_healthy
 
   postgres_db: 
     image: postgres:15
@@ -24,30 +25,19 @@ services:
       POSTGRES_DB: ${DB_POSTGRES}
       POSTGRES_USER: ${USER_POSTGRES}
       POSTGRES_PASSWORD: ${PASSWORD_POSTGRES} 
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${USER_POSTGRES}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
     env_file:
       - .env
-    
+    ports:
+      - "5432:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
-    networks:
-      - main
 
-
-  redis:
-    image: redis:latest
-    command: redis-server --appendonly yes
-    # restart: always
-    
-    ports:
-      - "6000:6379"
-    volumes: 
-      - redis_data:/data
-    networks:
-      - main
-    
-networks:
-  main: 
 
 volumes:
   postgres_data:
-  redis_data:
+

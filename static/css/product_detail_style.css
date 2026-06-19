@@ -1,0 +1,104 @@
+/* کانتینر اصلی */
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+/* کارت محصول */
+.product-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
+}
+
+/* تصویر محصول */
+.product-image {
+    width: 100%;
+    height: 350px;
+    object-fit: contain;   /* کل عکس نشون داده میشه */
+    background: #f9f9f9;   /* پس‌زمینه روشن برای عکس‌های کوچکتر */
+    border-bottom: 1px solid #eee;
+}
+/* محتوای محصول */
+.product-content {
+    padding: 30px;
+}
+
+.product-content h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.product-content p {
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 24px;
+}
+
+/* تیتر فواید */
+.green-title {
+    color: #1e7d4f;
+}
+
+/* بخش موارد احتیاط */
+.precautions-box {
+    background: #fff5f5;
+    border-right: 5px solid #e63946;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.precautions-box h4 {
+    color: #e63946;
+    margin-bottom: 10px;
+}
+
+.precautions-box p {
+    color: #b91c1c;
+}
+
+/* باکس‌های محتوایی */
+.section-box {
+    background: #fafafa;           /* پس‌زمینه روشن */
+    border-radius: 12px;           /* گوشه‌های گرد */
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #eee;        /* کادر ملایم */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.section-box:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+}
+
+/* تیترها */
+.section-box h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+/* متن‌ها */
+.section-box p {
+    color: #555;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* رنگ‌بندی خاص برای هر بخش */
+.section-box:nth-of-type(1) { border-right: 5px solid #3498db; } /* دسته‌بندی: آبی */
+.section-box:nth-of-type(2) { border-right: 5px solid #9b59b6; } /* تاریخچه: بنفش */
+.section-box:nth-of-type(3) { border-right: 5px solid #27ae60; } /* فواید: سبز */
+.section-box:nth-of-type(4) { border-right: 5px solid #f39c12; } /* طریقه مصرف: نارنجی */

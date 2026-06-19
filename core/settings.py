@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     "home",
     #Third_party_packages
     "storages",
+    "django_distill",
 ]
 
 MIDDLEWARE = [
@@ -89,15 +90,7 @@ DATABASES = {
     }
 }
 
-CACHES = {
-    'default': {
-        'BACKEND': 'django_redis.cache.RedisCache',
-        'LOCATION': 'redis://redis:6379/3',
-        'OPTIONS': {
-            'CLIENT_CLASS': 'django_redis.client.DefaultClient',
-        }
-    }
-}
+
 
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
@@ -164,3 +157,4 @@ STORAGES = {
 }
 
 
+DISTILL_DIR = BASE_DIR / "dist"

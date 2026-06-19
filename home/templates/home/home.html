@@ -93,7 +93,7 @@
         <div class="cards-holder">
             {% for product in products %}
                 <div class="card">
-                    <a href="{% url 'home:product_detail' product.id %}">
+                    <a href="{% url 'home:product_detail' product.slug %}">
                         <img src="{{ product.image.url }}" alt="{{ product.name }}">
                         <h3>{{ product.name }}</h3>
                     </a>

@@ -5,11 +5,11 @@ import re
 # Create your models here.
 
 
-def slugify_fa(text):
-    text = re.sub(r'[^\u0600-\u06FF\s]', '', text)
-    text = slugify(text,allow_unicode=True)    
+# def slugify_fa(text):
+#     text = re.sub(r'[^\u0600-\u06FF\s]', '', text)
+#     text = slugify(text,allow_unicode=True)    
 
-    return text
+#     return text
 
 class Product(models.Model):
     category = models.ForeignKey("Category",on_delete=models.SET_NULL,related_name="products",null=True,blank=True,verbose_name="دسته بندی")
@@ -23,10 +23,10 @@ class Product(models.Model):
     created_at = models.DateTimeField(auto_now=True,null=True)
     updated_at = models.DateTimeField(auto_now_add=True,null=True)
 
-    def save(self,*args,**kwargs):
-        if not self.slug:
-            self.slug = slugify_fa(self.name)
-        return super().save(*args,**kwargs)
+    # def save(self,*args,**kwargs):
+    #     if not self.slug:
+    #         self.slug = slugify_fa(self.name)
+    #     return super().save(*args,**kwargs)
 
     def __str__(self):
         return self.name
@@ -38,10 +38,10 @@ class Category(models.Model):
     def __str__(self):
         return self.name
     
-    def save(self,*args,**kwargs):
-        if not self.slug:
-            self.slug = slugify_fa(self.name,allow_unicode=True)
-        return super().save(*args,**kwargs)
+    # def save(self,*args,**kwargs):
+    #     if not self.slug:
+    #         self.slug = slugify_fa(self.name,allow_unicode=True)
+    #     return super().save(*args,**kwargs)
     
     class Meta:
         verbose_name = 'category'
