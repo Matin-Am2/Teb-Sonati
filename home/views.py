@@ -1,5 +1,6 @@
 from django.views.generic.base import TemplateView
 from django.views.generic import ListView,DetailView
+from random import sample
 from .models import Product,Category
 # Create your views here.
 
@@ -12,7 +13,22 @@ class HomeView(ListView):
     
     def get_queryset(self):
         return Product.objects.order_by("-created_at")[:8]
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
 
+        products = []
+
+        for category in Category.objects.prefetch_related("products"):
+            category_products = list(category.products.all())
+
+            if len(category_products) <= 3:
+                products.extend(category_products)
+            else:
+                products.extend(sample(category_products, 3))
+
+        context["products"] = products
+        return context
+    
 class AboutView(TemplateView):
     template_name = "home/about.html"
 
