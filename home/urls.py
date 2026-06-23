@@ -31,7 +31,7 @@ distill_re_path(
 ),
 
 distill_path(
-    "home/",
+    "",
     views.HomeView.as_view(),
     name="home",
 ),
