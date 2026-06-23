@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سایت طب سنتی</title>
+
+    
+
+    <!-- فونت -->
+    <link href="https://cdn.fontcdn.ir/Font/Persian/Sahel/Sahel.css" rel="stylesheet" type="text/css">
+
+    <!-- استایل‌های اصلی -->
+    <link rel="stylesheet" href="/static/css/base_style.css">  
+
+    <!-- Swiper CSS (باید قبل از JS بیاد) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">   
+    
+  <link rel="stylesheet" href="/static/css/faq_style.css">
+  <script src="/static/js/faq.js"></script>
+
+</head>
+<body style="font-family: Sahel, sans-serif;">
+    
+
+
+    <link rel="stylesheet" href="/static/css/navbar_style.css">
+
+
+<nav>
+    <!-- Checkbox for toggling menu -->
+    <input type="checkbox" id="check">
+    <!-- Menu icon -->
+    <label for="check" class="checkbtn">
+      <i class="fas fa-bars"></i>
+    </label>
+    <label class="logo">
+      <img src="/static/images/Traditional%20Medicine%20logo.jpg" alt="سنتی" />
+    </label>  
+    <!-- Navigation links -->
+    <ul>
+      <li><a href="/">خانه </a></li>
+      <li><a href="/products/">محصولات</a></li>
+      <li><a href="/faq/">سوالات متداول</a></li>
+      <li><a href="/about/">درباره من </a></li>
+    </ul>
+  </nav>
+    
+  <section class="faq-section" aria-label="پرسش‌های متداول">
+    <div class="container">
+      <h2 class="faq-title">پرسش‌های متداول</h2>
+
+      <div class="faq-list">
+        <!-- سوال 1 -->
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq1">
+            <span>۱ - مدت زمان تقریبی درمان هر فرد به چه صورت تعیین می‌شود؟</span>
+            <svg class="icon" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div id="faq1" class="faq-answer" hidden>
+            <p>مدت زمان دوره درمان بستگی به نوع بیماری، شرایط جسمی فرد و میزان رعایت توصیه‌های پزشکی دارد. درمان‌های سنتی معمولاً به مرور زمان و با استمرار در استفاده از داروها یا دمنوش‌ها اثر خود را نشان می‌دهند. این دوره می‌تواند از چند هفته تا چند ماه به طول انجامد، ولی در بعضی از موارد ممکن است روند درمان طولانی‌تر نیز بشود. مهم‌ترین عامل در درمان، پیگیری و رعایت توصیه‌ها به‌طور منظم است.</p>
+          </div>
+        </div>
+
+        <!-- سوال 2 -->
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq2">
+            <span>۲ - آیا مصرف دمنوش‌ها به تنهایی برای درمان بیماری‌ها کافی است؟</span>
+            <svg class="icon" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div id="faq2" class="faq-answer" hidden>
+            <p>مصرف دمنوش‌ها به‌عنوان یک درمان مکمل می‌تواند در بسیاری از بیماری‌ها مفید باشد، اما به‌تنهایی برای درمان قطعی کافی نیست. عوامل زیادی در روند بهبودی مؤثر هستند که شامل رژیم غذایی مناسب، استراحت کافی، مصرف روغن‌ها و داروهای تکمیلی و پیگیری دقیق وضعیت سلامت فرد می‌باشند. همچنین توجه به عوامل روانی و خواب منظم نیز می‌تواند نقش مهمی در افزایش اثربخشی درمان‌ها داشته باشد.</p>
+          </div>
+        </div>
+
+        <!-- سوال 3 -->
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq3">
+            <span>۳ - تشخیص بیماری‌ها چگونه و بر اساس چه معیارهایی انجام می‌شود؟</span>
+            <svg class="icon" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div id="faq3" class="faq-answer" hidden>
+            <p>تشخیص بیماری‌ها معمولاً بر اساس علائم بالینی، تاریخچه پزشکی فرد و آزمایشات مختلف انجام می‌شود. در طب سنتی، زبان یکی از مهم‌ترین ابزارهای تشخیص است که وضعیت سلامت عمومی بدن را نشان می‌دهد. البته این فقط بخشی از فرآیند تشخیص است و در صورت لزوم، آزمایش‌های تکمیلی مانند آزمایش خون یا سونوگرافی نیز انجام می‌شوند. تشخیص صحیح نیاز به بررسی دقیق و تجربه متخصص دارد.</p>
+          </div>
+        </div>
+
+        <!-- سوال 4 -->
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq4">
+            <span>۴ - آیا تشخیص بیماری از روی زبان فقط محدود به بیماری‌های خاص است؟</span>
+            <svg class="icon" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div id="faq4" class="faq-answer" hidden>
+            <p>خیر، تشخیص بیماری از روی زبان محدود به بیماری‌های خاص نمی‌شود. زبان به‌عنوان یکی از نشانه‌های اصلی در طب سنتی، وضعیت سلامت عمومی بدن را نمایان می‌سازد. از طریق تغییرات رنگ، ضخامت، لایه‌برداری و ترک‌های روی زبان، می‌توان اطلاعات مفیدی در مورد وضعیت دستگاه‌های مختلف بدن مانند گوارش، قلب و عروق، کبد و سایر ارگان‌ها به دست آورد. بنابراین زبان، یکی از مهم‌ترین ابزارهای تشخیص است که در بیماری‌های مختلف کاربرد دارد.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    
+</body>
+</html>
