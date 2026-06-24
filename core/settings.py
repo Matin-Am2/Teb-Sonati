@@ -126,7 +126,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL =  "/Teb-Sonati/static/"
 STATICFILES_DIRS = [
     BASE_DIR / "staticfiles"
 ]
@@ -158,3 +158,6 @@ STORAGES = {
 
 
 DISTILL_DIR = BASE_DIR / "dist"
+DISTILL_URL = "https://matin-am2.github.io/Teb-Sonati/"
+
+FORCE_SCRIPT_NAME = "/Teb-Sonati"
