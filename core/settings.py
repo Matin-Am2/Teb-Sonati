@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     "home",
     #Third_party_packages
     "storages",
-    "django_distill",
+   
 ]
 
 MIDDLEWARE = [
@@ -126,11 +126,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
-STATIC_URL =  "/Teb-Sonati/static/"
+STATIC_URL =  "/static/"
 STATICFILES_DIRS = [
-    BASE_DIR / "staticfiles"
+    BASE_DIR / "static"
 ]
-STATIC_ROOT = BASE_DIR / "static"
+STATIC_ROOT = BASE_DIR / "staticfiles"
 
 
 # Default primary key field type
@@ -155,9 +155,3 @@ STORAGES = {
 },
 
 }
-
-
-DISTILL_DIR = BASE_DIR / "dist"
-DISTILL_URL = "https://matin-am2.github.io/Teb-Sonati/"
-
-FORCE_SCRIPT_NAME = "/Teb-Sonati"
