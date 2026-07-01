@@ -27,6 +27,8 @@ SECRET_KEY = config("SECRET_KEY",cast=str)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config("DEBUG",cast=bool)
 
+CSRF_TRUSTED_ORIGINS = ["https://teb-sonati-production.up.railway.app","http://127.0.0.1:8000"]
+
 ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=lambda v: [s.strip() for s in v.split(',')],default="*")
 
 
