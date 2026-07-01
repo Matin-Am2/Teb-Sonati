@@ -5,10 +5,8 @@
     color:#fff;
     text-align:center;
     width:100%;
-    min-height:auto;
-
     padding:60px 20px;
-
+    min-height:0;
     position:relative;
     overflow:hidden;
     box-sizing:border-box;

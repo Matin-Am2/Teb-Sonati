@@ -7,9 +7,7 @@
   list-style: none;
   box-sizing: border-box;
 }
-body {
-  font-family: "Montserrat", sans-serif;
-}
+
 nav {
   background: #77e6008d;
   height: 100px;
@@ -81,7 +79,7 @@ a:hover {
     padding-left: 30px;
   }
   nav ul li a {
-    font-size: 50px;
+    font-size: 15px;
    
   }
 }
@@ -119,9 +117,4 @@ a:hover {
   #check:checked~ul {
     left: 0;
   }
-}
-section {
-  background: url("bg.jpg") no-repeat;
-  background-size: cover;
-  height: calc(100vh - 80px);
 }
