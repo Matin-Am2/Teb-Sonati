@@ -17,6 +17,7 @@ nav {
   right: 0;
   width: 100%;
   z-index: 1000;
+  border:5px solid red;
 }
 
 /* لوگو وسط */
