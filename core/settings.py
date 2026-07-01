@@ -150,8 +150,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 #Arvan cloud 
-STATICFILES_STORAGE = 'whitenoise.storage.StaticFilesStorage'
-
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 # STORAGES = {
 #     "default": {
 #         "BACKEND": "storages.backends.s3boto3.S3Boto3Storage",
