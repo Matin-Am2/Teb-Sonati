@@ -1,123 +1,77 @@
-/* Hero Section */
-.hero {
-    background: linear-gradient(rgba(20, 94, 3, 0.6), rgba(20, 94, 3, 0.6)),
-                url("../images/hero-bg.jpg") center/cover no-repeat;
-    color: white;
-    text-align: center;
-    padding: 70px 20px;
-    width: 100%;
-    min-height: unset;
-    max-height: 500px;
-    box-sizing: border-box;
+.hero{
+    background:linear-gradient(rgba(20,94,3,.6),rgba(20,94,3,.6)),
+    url("../images/hero-bg.jpg") center/cover no-repeat;
 
-    /* اینا هم اضافه کن */
-    position: relative;
-    overflow: hidden;
+    color:#fff;
+    text-align:center;
+    width:100%;
+    min-height:auto;
+
+    padding:60px 20px;
+
+    position:relative;
+    overflow:hidden;
+    box-sizing:border-box;
 }
 
-.hero-content {
-    position: relative;
-    margin-top: 150px; /* مقدار رو می‌تونی تغییر بدی */
-    text-align: center; /* اگه بخوای وسط چین بمونه */
-    z-index: 2; /* مطمئن میشه روی بک‌گراند نمایش داده بشه */
+.hero-content{
+    position:relative;
+    z-index:2;
+    margin-top:90px;
 }
 
-.hero h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
+.hero-title{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:15px;
+    flex-wrap:wrap;
 }
 
-.hero p {
-    font-size: 18px;
-    margin-bottom: 30px;
-    line-height: 1.8;
+.hero-title h1{
+    margin:0;
 }
 
-.hero .btn {
-    background: #77e600;
-    color: white;
-    padding: 12px 30px;
-    border-radius: 25px;
-    text-decoration: none;
-    transition: 0.3s;
+.hero h1{
+    font-size:36px;
+    line-height:1.5;
 }
 
-.hero .btn:hover {
-    background: #145e03;
+.hero p{
+    max-width:850px;
+    margin:20px auto 30px;
+    line-height:2;
+    font-size:18px;
 }
-.hero-title {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px; /* فاصله بین آیکن و متن */
-    flex-wrap: wrap; /* تو گوشی آیکن و متن زیر هم میرن */
-}
-.hero-title h1 {
-    margin: 0;
-}
-
-
 /* Products Section */
-.products {
-    background: #f9fff9;
-    padding: 60px 20px;
-    text-align: center;
+.products{
+    background:#f2fff2;
+    padding:60px 20px;
+    box-sizing:border-box;
+}
+.products-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
+    gap:20px;
 }
 
-.products h2 {
-    font-size: 28px;
-    margin-bottom: 40px;
-    color: #145e03;
-}
 
-/* اسلایدر */
-.slider-container {
-    display: flex;
-    justify-content: center;
-    overflow: hidden;
-}
-
-.cards-holder {
-    display: flex;
-    gap: 20px;
-    animation: scroll 25s linear infinite;
-}
-
-/* کارت محصول */
-.card {
-    width: 260px;
-    background: linear-gradient(145deg, #ffffff, #f1fff1);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    border-radius: 15px;
-    overflow: hidden;
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-    text-align: center;
-    flex-shrink: 0; /* نذار کوچیک شه */
-}
-
-.card:hover {
-    transform: translateY(-10px) scale(1.05);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-}
-
-.card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-}
-
-.card h3 {
-    font-size: 18px;
-    color: #145e03;
-    padding: 15px;
+.card img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
 }
 
 /* Extra Section */
-.extra {
-    background: #f2fff2;
-    padding: 80px 20px;
-    text-align: center;
-    box-sizing: border-box;
+.extra{
+
+    background:#f2fff2;
+
+    padding:80px 20px;
+
+    text-align:center;
 
 }
 
@@ -127,13 +81,15 @@
     color: #145e03;
 }
 
-.extra p {
-    font-size: 18px;
-    max-width: 800px;
-    margin: 0 auto;
-    line-height: 1.8;
-}
+.extra p{
 
+    max-width:900px;
+
+    margin:auto;
+
+    line-height:2;
+
+}
 /* انیمیشن حرکت */
 @keyframes scroll {
     0% { transform: translateX(0); }
@@ -145,7 +101,9 @@
     .hero {
         padding: 60px 15px;
     }
-
+    .hero-content{
+    margin-top:35px;
+}
     .hero h1 {
         font-size: 24px;
     }
@@ -158,7 +116,9 @@
         width: 70px;
         height: 70px;
     }
-
+    .products-header h2 {
+        font-size: 22px;
+    }
     .products h2 {
         font-size: 22px;
     }
@@ -173,6 +133,22 @@
 
     .extra p {
         font-size: 16px;
+    }
+    .about{
+    padding:50px 18px;
+}
+
+    .about p{
+        font-size:16px;
+        line-height:2;
+    }
+
+    .why-text p{
+        font-size:16px;
+    }
+
+    .why-text h2{
+        font-size:24px;
     }
 }
 
@@ -194,10 +170,30 @@
         font-size: 14px;
     }
 
+    .hero-title{
+        flex-direction:column;
+    }
+
+    .hero-title img{
+        width:60px;
+        height:60px;
+    }
+
+    .products-header{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .btn{
+        width:100%;
+        max-width:250px;
+    }
     .card {
         width: 160px;
     }
-
+    .card img{
+    display:block;
+}
     .products h2, 
     .extra h2 {
         font-size: 20px;
@@ -208,11 +204,6 @@
     }
 }
 /* ===== Animated Suns ===== */
-.hero {
-    position: relative; /* تا عناصر مطلق داخلش محدود بشن */
-    overflow: hidden;   /* نذار خورشیدا بیرون بزنن */
-}
-
 .sun, .sun2, .sun3 {
     opacity: 0.3;
     position: absolute;
@@ -261,13 +252,16 @@
 }
 
 /* ===== Footer ===== */
-.footer {
-    background: #145e03; /* رنگ سبز اصلی */
-    color: #fff;
-    text-align: center;
-    padding: 50px 20px;
-    margin-top: 60px;
-    box-sizing: border-box;
+.footer{
+
+    background:#145e03;
+
+    color:#fff;
+
+    padding:50px 20px;
+
+    text-align:center;
+
 }
 
 .footer-content {
@@ -276,11 +270,21 @@
     line-height: 1.8;
 }
 
-.footer-links a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 8px;
-    transition: color 0.3s;
+
+.footer-links{
+
+    margin-top:15px;
+
+}
+
+.footer-links a{
+
+    color:white;
+
+    text-decoration:none;
+
+    margin:0 8px;
+
 }
 
 .footer-links a:hover {
@@ -292,23 +296,6 @@
     padding-top: 15px;
     font-size: 14px;
     opacity: 0.8;
-}
-
-/* Products Section */
-.products {
-    background: #f2fff2;
-    padding: 60px 20px;
-    box-sizing: border-box;
-    max-height: 500px;
-    
-}
-
-/* هدر بخش محصولات */
-.products-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 25px;
 }
 
 .products-header h2 {
@@ -369,43 +356,13 @@
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
 
-.card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-}
-
 .card h3 {
     font-size: 18px;
     color: #145e03;
     padding: 15px;
 }
 
-/* انیمیشن حرکت اسلایدر */
-@keyframes scroll {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
-}
 
-/* 📱 ریسپانسیو */
-@media (max-width: 768px) {
-    .products-header h2 {
-        font-size: 22px;
-    }
-    .card {
-        width: 200px;
-    }
-}
-
-@media (max-width: 480px) {
-    .products-header {
-        flex-direction: column;
-        gap: 10px;
-    }
-    .card {
-        width: 160px;
-    }
-}
 
 /* ===== Why Herbal Section ===== */
 .why-herbal {
@@ -413,9 +370,9 @@
     box-sizing: border-box;
     padding: 80px 20px;
     min-height: unset;
-    max-height: 600px;
     
 }
+
 
 .why-container {
     display: flex;
@@ -429,9 +386,11 @@
 
 .why-image img {
     width: 500px;
+    max-width:100%;
     height: auto;
     border-radius: 18px;
     box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    
 }
 
 .why-text {
@@ -466,8 +425,7 @@
 .about { 
     background-color: #f2fff2;
     box-sizing: border-box;
-    padding: 100px;
-    max-height:400px;
+    padding:70px 20px;
     min-height: unset;
     max-width: auto;
 }
