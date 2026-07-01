@@ -150,18 +150,19 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 #Arvan cloud 
-STORAGES = {
-    "default": {
-        "BACKEND": "storages.backends.s3boto3.S3Boto3Storage",
-        "OPTIONS": {
-            "access_key":config("ARVAN_ACCESS_KEY",cast=str),
-            "secret_key":config("ARVAN_SECRET_KEY",cast=str), 
-            "bucket_name":"teb-sonati",
-            "endpoint_url":"https://s3.ir-thr-at1.arvanstorage.ir"
-        },
-    },
-    "staticfiles": {
-        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
-},
+STATICFILES_STORAGE = "whitenoise.storage.StaticFilesStorage"
+# STORAGES = {
+#     "default": {
+#         "BACKEND": "storages.backends.s3boto3.S3Boto3Storage",
+#         "OPTIONS": {
+#             "access_key":config("ARVAN_ACCESS_KEY",cast=str),
+#             "secret_key":config("ARVAN_SECRET_KEY",cast=str), 
+#             "bucket_name":"teb-sonati",
+#             "endpoint_url":"https://s3.ir-thr-at1.arvanstorage.ir"
+#         },
+#     },
+#     "staticfiles": {
+#         "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
+# },
 
-}
+# }
