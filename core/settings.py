@@ -162,7 +162,7 @@ STORAGES = {
         },
     },
     "staticfiles": {
-        "BACKEND": "CompressedManifestStaticFilesStorage",
+        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
 },
 
 }
