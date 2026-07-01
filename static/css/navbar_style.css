@@ -12,7 +12,11 @@ nav {
   background: #77e6008d;
   height: 100px;
   width: 100%;
-  position: relative;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
 /* لوگو وسط */
@@ -96,10 +100,11 @@ a:hover {
     width: 100%;
     height: 100vh;
     background: #2c3e50;
-    top: 80px;
+    top: 100px;
     left: -100%;
     text-align: center;
     transition: all .5s;
+    z-index:999;
   }
   nav ul li {
     display: block;

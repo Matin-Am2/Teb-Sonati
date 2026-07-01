@@ -27,5 +27,16 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     {% block extra_scripts %}{% endblock %}
+    <script>
+        const check = document.getElementById("check");
+
+        check.addEventListener("change", function () {
+            if (this.checked) {
+                document.body.style.overflow = "hidden";
+            } else {
+                document.body.style.overflow = "";
+            }
+        });
+    </script>
 </body>
 </html>
