@@ -1,7 +1,5 @@
 .hero{
-    background:linear-gradient(rgba(20,94,3,.6),rgba(20,94,3,.6)),
-    url("../images/hero-bg.jpg") center/cover no-repeat;
-
+    background:linear-gradient(rgba(20,94,3,.6),rgba(20,94,3,.6));
     color:#fff;
     text-align:center;
     width:100%;
